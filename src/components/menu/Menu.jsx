@@ -10,6 +10,7 @@ const Menu = () => {
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           My Application
         </Typography>
+          <Button color="inherit" component={Link} to="/create-document">Add document</Button>
         <Button color="inherit" component={Link} to="/">Documents</Button>
         <Button color="inherit" component={Link} to="/weight-coefficients">Weight Coefficients</Button>
             <Button color="inherit" component={Link} to="/logical-search">Logical Search</Button>
