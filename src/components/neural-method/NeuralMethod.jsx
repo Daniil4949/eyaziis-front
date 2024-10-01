@@ -47,8 +47,21 @@ const NeuralMethod = () => {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },
+                responseType: 'blob', // Указываем, что ожидаем blob в ответе
             });
-            setResponseMessage(response.data);  // Предполагается, что сервер возвращает строку в поле result
+
+            // Создаем URL для скачивания
+            const url = window.URL.createObjectURL(new Blob([response.data]));
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'report.csv'; // Имя файла для скачивания
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+            window.URL.revokeObjectURL(url); // Освобождаем URL
+
+            // Если нужно, можно установить сообщение о результате
+            setResponseMessage('Файл успешно загружен');
         } catch (error) {
             console.error('Error uploading file:', error);
             setResponseMessage('Произошла ошибка при загрузке файла');
