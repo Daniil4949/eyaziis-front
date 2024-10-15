@@ -6,6 +6,7 @@ import Documents from "./components/documents";
 import {Container} from '@mui/material';
 import LogicalSearch from "./components/logical-search";
 import CreateDocumentForm from "./components/documents/CreateDocumentForm";
+import NeuralMethod from "./components/neural-method";
 
 function App() {
     return (
@@ -15,8 +16,9 @@ function App() {
                 <Routes>
                     <Route path="/create-document" element={<CreateDocumentForm/>}/>
                     <Route path="/" element={<Documents/>}/>
-                    <Route path="/weight-coefficients" element={<WeightCoefficient/>}/>
-                    <Route path="/logical-search" element={<LogicalSearch/>}/>
+                    {/*<Route path="/weight-coefficients" element={<WeightCoefficient/>}/>*/}
+                    {/*<Route path="/logical-search" element={<LogicalSearch/>}/>*/}
+                    <Route path="/neural-method" element={<NeuralMethod/>}/>
                 </Routes>
             </Container>
         </div>
