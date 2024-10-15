@@ -81,7 +81,7 @@ const LogicalSearch = () => {
                         <Card key={doc._id} style={{marginBottom: 20}}>
                             <CardContent>
                                 <Typography variant="h6" component="div">
-                                    {doc.name}
+                                    {doc.link ? doc.link : doc.name}
                                 </Typography>
                                 <Typography variant="body2" color="textSecondary">
                                     {doc.text}
