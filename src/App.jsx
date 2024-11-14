@@ -1,14 +1,14 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Container } from '@mui/material';
-import MachineTranslator from "./components/machine-translator";
+import SpeechSynthesis from "./components/speech-synthesis";
 
 function App() {
     return (
         <div>
             <Container sx={{ marginTop: 2 }}>
                 <Routes>
-                    <Route path="/" element={<MachineTranslator />} />
+                    <Route path="/" element={<SpeechSynthesis />} />
                 </Routes>
             </Container>
         </div>
